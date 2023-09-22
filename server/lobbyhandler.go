@@ -17,7 +17,7 @@ func ListRooms(_server string) {
 	config := sarama.NewConfig()
 	config.Version = sarama.V2_6_0_0 // Adjust according to your Kafka version
 
-	client, err := sarama.NewClient([]string{"localhost:9092"}, config)
+	client, err := sarama.NewClient([]string{_server}, config)
 	if err != nil {
 		log.Fatalf("Failed to create client: %v", err)
 	}
